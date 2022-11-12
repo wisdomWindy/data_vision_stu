@@ -13,6 +13,21 @@ export const useMainStore = defineStore('main', () => {
     },{
       name:'饼图',
       path:'/pie'
+    },{
+      name:'散点图',
+      path:'/scatter'
+    },{
+      name:'气泡图',
+      path:'/buble'
+    },{
+      name:'雷达图',
+      path:'/radar'
+    },{
+      name:'漏斗图',
+      path:'/funnel'
+    },{
+      name:'仪表盘',
+      path:'/gauge'
     }]
   },{
     name:'复合图表',
