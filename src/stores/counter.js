@@ -28,6 +28,30 @@ export const useMainStore = defineStore('main', () => {
     },{
       name:'仪表盘',
       path:'/gauge'
+    },{
+      name:'箱线图',
+      path:'/boxplot'
+    },{
+      name:'热力图',
+      path:'/heatmap'
+    },{
+      name:'旭日图',
+      path:'/sunburst'
+    },{
+      name:'桑基图',
+      path:'/sankey'
+    },{
+      name:'词云图',
+      path:'/wordcloud'
+    },{
+      name:'树图',
+      path:'/tree'
+    },{
+      name:'矩形树图',
+      path:'/treemap'
+    },{
+      name:'关系图',
+      path:'/graph'
     }]
   },{
     name:'复合图表',

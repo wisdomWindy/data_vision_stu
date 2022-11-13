@@ -28,6 +28,30 @@ const routes = [{
   path:'/gauge',
   component:() => import('@/components/basic/Gauge.vue')
 },{
+  path:'/boxplot',
+  component:() => import('@/components/basic/Boxplot.vue')
+},{
+  path:'/heatmap',
+  component:() => import('@/components/basic/Heatmap.vue')
+},{
+  path:'/sunburst',
+  component:() => import('@/components/basic/Sunburst.vue')
+},{
+  path:'/sankey',
+  component:() => import('@/components/basic/Sankey.vue')
+},{
+  path:'/wordcloud',
+  component:() => import('@/components/basic/Wordcloud.vue')
+},{
+  path:'/tree',
+  component:() => import('@/components/basic/Tree.vue')
+},{
+  path:'/treemap',
+  component:() => import('@/components/basic/Treemap.vue')
+},{
+  path:'/graph',
+  component:() => import('@/components/basic/Graph.vue')
+},{
   path: '/complex',
   name: 'complex',
   component: () => import('@/views/Complex.vue')
