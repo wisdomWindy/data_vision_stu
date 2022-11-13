@@ -55,7 +55,11 @@ export const useMainStore = defineStore('main', () => {
     }]
   },{
     name:'复合图表',
-    path:'/complex'
+    path:'/complex',
+    children:[{
+      name:'时间轴',
+      path:'/timeline'
+    }]
   }]);
   return { menuList }
 })

@@ -55,6 +55,9 @@ const routes = [{
   path: '/complex',
   name: 'complex',
   component: () => import('@/views/Complex.vue')
+},{
+  path:'/timeline',
+  component:() => import('@/components/complex/Timeline.vue')
 }];
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
