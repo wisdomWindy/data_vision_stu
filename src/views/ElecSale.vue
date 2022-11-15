@@ -41,10 +41,85 @@ onMounted(() => {
         y: '18%'
       }, {
         text: '2310',
-        x: '26',
-        y: '18%'
+        x: '76',
+        y: '23%'
       },{
-        text:''
+        text:'购买用户设备分布',
+        x:'19.8%',
+        y:'45%'
+      },{
+        text:'购买用户年龄分布',
+        x:'49.8%',
+        y:'45%'
+      },{
+        text:'购买用户渠道分布',
+        x:'79.8%',
+        y:'45%'
+      },{
+        text:'4509834',
+        x:'center',
+        y:'9%'
+      },{
+        text:'订单量TOP10城市',
+        x:'18%',
+        y:'60%'
+      },{
+        text:'订单量分时段统计',
+        x:'65%',
+        y:'60%'
+      }],
+      grid:[{
+        left:'5%',
+        right:'55%',
+        top:'65%',
+        bottom:'5%',
+        containLabel:true
+      },{
+        gridIndex:1,
+        left:'50%',
+        right:'5%',
+        top:'65%',
+        bottom:'5%',
+        containLabel:true
+      }],
+      xAxis:[{
+        type:'value',
+      },{
+        gridIndex:1,
+        type:'category',
+        data:['0:00']
+      }],
+      yAxis:[{
+        type:'category',
+        data:['城市A']
+      },{
+        gridIndex:1,
+        type:'value'
+      }],
+      series:[{
+        type:'bar',
+        data:[]
+      },{
+        type:'pie',
+        center:['20%', '45%'],
+        radius:['15%', '20%'],
+        data:[]
+      },{
+        type:'pie',
+        center:['50%', '45%'],
+        radius:['15%', '20%'],
+        data:[]
+      },{
+        type:'pie',
+        center:['80%', '45%'],
+        radius:['15%', '20%'],
+        data:[]
+      },{
+        type:'line',
+        xAxisIndex:1,
+        yAxisIndex:1,
+        data:[],
+        smooth:true
       }]
   }
   echartsInstance.setOption(option);
