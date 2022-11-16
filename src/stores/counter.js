@@ -62,6 +62,9 @@ export const useMainStore = defineStore('main', () => {
     },{
       name:'elecDashboard',
       path:'/elecDashboard'
+    },{
+      name:'carsSale',
+      path:'/carsSale'
     }]
   }]);
   return { menuList }

@@ -61,6 +61,9 @@ const routes = [{
 },{
   path:'/elecDashboard',
   component:() => import('@/views/ElecSale.vue')
+},{
+  path:'/carsSale',
+  component:() => import('@/views/CarsSale.vue')
 }];
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
