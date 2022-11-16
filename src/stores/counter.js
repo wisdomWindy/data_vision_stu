@@ -59,6 +59,9 @@ export const useMainStore = defineStore('main', () => {
     children:[{
       name:'时间轴',
       path:'/timeline'
+    },{
+      name:'elecDashboard',
+      path:'/elecDashboard'
     }]
   }]);
   return { menuList }

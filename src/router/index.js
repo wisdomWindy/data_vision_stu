@@ -58,6 +58,9 @@ const routes = [{
 },{
   path:'/timeline',
   component:() => import('@/components/complex/Timeline.vue')
+},{
+  path:'/elecDashboard',
+  component:() => import('@/views/ElecSale.vue')
 }];
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

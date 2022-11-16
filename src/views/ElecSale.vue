@@ -21,15 +21,15 @@ onMounted(() => {
       FontSize:20
     },{
       text:'今日成交订单数',
-      x:'14.7',
+      x:'20',
       y:'18%'
       }, {
         text: '34220',
-        x: '15',
+        x: '25',
         y: '18%'
       }, {
         text: '订单成功占比',
-        x: '20',
+        x: '40',
         y: '18%'
       }, {
         text: '93.25%',
@@ -52,5 +52,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
- 
+.elecsale{
+  height: 100%;
+}
 </style>
