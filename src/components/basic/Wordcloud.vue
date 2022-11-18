@@ -22,32 +22,33 @@ const data = [{
     name: '屏幕',
     value: 40
   }];
-  const data2=[10,20,30]
+  const data2=[10,20,30];
+  const maxValue = data.sort((a,b) => {
+    return a-b;
+  })[0];
 onMounted(() => {
   const echartsInstance = useEchartsInstance(wordcloud.value);
   const option = {
     xAxis:{
-      // type:'category',
-      // data:['0:00',"1:00",'2:00']
       show:false
     },
     yAxis:{
-      // type:"value"
       show:false
     },
     series: [{
       type: 'custom',
       renderItem(params, api){
-        var values = [api.value(0), api.value(1)];
-        var coord = api.coord(values);
-        var size = api.size([1, 1], values);
+        const dataItem = data[params.dataIndex];
+        const style = api.style();
         return {
           type:'text',
           x:Math.random() * 700,
           y: Math.random() * 800,
+          rotation:Math.floor(Math.random() * 90),
           style:{
-            text: data[params.dataIndex].name,
-            fontSize:data[params.dataIndex].value
+            text: dataItem.name,
+            fontSize:dataItem.value / maxValue * 100,
+            color:style.color
           }
         }
       },
