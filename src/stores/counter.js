@@ -52,6 +52,9 @@ export const useMainStore = defineStore('main', () => {
     },{
       name:'关系图',
       path:'/graph'
+    },{
+      name:'日历图',
+      path:'/calendar'
     }]
   },{
     name:'复合图表',

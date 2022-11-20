@@ -52,6 +52,9 @@ const routes = [{
   path:'/graph',
   component:() => import('@/components/basic/Graph.vue')
 },{
+  path:'/calendar',
+  component:() => import('@/components/basic/Calendar.vue')
+},{
   path: '/complex',
   name: 'complex',
   component: () => import('@/views/Complex.vue')

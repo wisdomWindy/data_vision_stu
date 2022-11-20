@@ -27,27 +27,22 @@ onMounted(() => {
   const echartsInstance = useEchartsInstance(wordcloud.value);
   const option = {
     xAxis:{
-      // type:'category',
-      // data:['0:00',"1:00",'2:00']
       show:false
     },
     yAxis:{
-      // type:"value"
       show:false
     },
     series: [{
       type: 'custom',
       renderItem(params, api){
-        var values = [api.value(0), api.value(1)];
-        var coord = api.coord(values);
-        var size = api.size([1, 1], values);
         return {
           type:'text',
-          x:Math.random() * 700,
-          y: Math.random() * 800,
+          x:Math.random() * 500,
+          y: Math.random() * 500,
           style:{
             text: data[params.dataIndex].name,
-            fontSize:data[params.dataIndex].value
+            fontSize:data[params.dataIndex].value,
+            fill: `rgba(${Math.floor(Math.random() * 257)},${Math.floor(Math.random() * 257)},${Math.floor(Math.random() * 257)}, ${Math.random()})`
           }
         }
       },
