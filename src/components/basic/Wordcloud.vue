@@ -22,7 +22,10 @@ const data = [{
     name: '屏幕',
     value: 40
   }];
-  const data2=[10,20,30]
+  const data2=[10,20,30];
+  const maxValue = data.sort((a,b) => {
+    return a-b;
+  })[0];
 onMounted(() => {
   const echartsInstance = useEchartsInstance(wordcloud.value);
   const option = {
