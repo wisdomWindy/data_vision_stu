@@ -55,6 +55,12 @@ const routes = [{
   path:'/calendar',
   component:() => import('@/components/basic/Calendar.vue')
 },{
+  path:'/map',
+  component:() => import('@/components/basic/Map.vue')
+},{
+  path:'/geo',
+  component:() => import('@/components/basic/Geo.vue')
+},{
   path: '/complex',
   name: 'complex',
   component: () => import('@/views/Complex.vue')

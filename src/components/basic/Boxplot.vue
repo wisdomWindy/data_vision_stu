@@ -9,10 +9,6 @@ import { echarts, useEchartsInstance } from '@/utils/useEchartsInstance';
 const boxplot = ref(null);
 onMounted(() => {
   const echartsInstance = useEchartsInstance(boxplot.value);
-  // const data = echarts.dataTool.prepareBoxplotData([
-   
-   
-  // ])
   const option = {
     tooltip:{},
     xAxis: {

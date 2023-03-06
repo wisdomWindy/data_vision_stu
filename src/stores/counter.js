@@ -55,6 +55,12 @@ export const useMainStore = defineStore('main', () => {
     },{
       name:'日历图',
       path:'/calendar'
+    },{
+      name:'map地图',
+      path:'/map'
+    },{
+      name:'geo地图',
+      path:'/geo'
     }]
   },{
     name:'复合图表',

@@ -57,13 +57,15 @@ onMounted(() => {
       top: 120,
       left: 30,
       right: 30,
-      cellSize: ['auto', 13],
+      cellSize: [20, 23],
       range: '2022',
       splitLine: {
         show: false
       },
       itemStyle: {
-        borderWidth: 0.5
+        borderWidth: 0.5,
+        borderColor:'#fff',
+        borderWidth:10
       },
       dayLabel:{
         nameMap:'ZH'
