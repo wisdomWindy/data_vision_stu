@@ -1,6 +1,6 @@
-# vue_vision
+# data_vision
 
-This template should help get you started developing with Vue 3 in Vite.
+这个项目名为data_vision，中文叫做数据可视化。这个项目主要用于学习使用echarts制作各种图表。
 
 ## Recommended IDE Setup
 
