@@ -60,11 +60,8 @@ const routes = [{
 },{
   path:'/geo',
   component:() => import('@/components/basic/Geo.vue')
-},{
-  path: '/complex',
-  name: 'complex',
-  component: () => import('@/views/Complex.vue')
-},{
+},
+{
   path:'/timeline',
   component:() => import('@/components/complex/Timeline.vue')
 },{

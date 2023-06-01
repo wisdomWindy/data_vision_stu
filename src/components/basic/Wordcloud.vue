@@ -22,10 +22,6 @@ const data = [{
     name: '屏幕',
     value: 40
   }];
-  const data2=[10,20,30];
-  const maxValue = data.sort((a,b) => {
-    return a-b;
-  })[0];
 onMounted(() => {
   const echartsInstance = useEchartsInstance(wordcloud.value);
   const option = {
@@ -38,10 +34,12 @@ onMounted(() => {
     series: [{
       type: 'custom',
       renderItem(params, api){
+        let x = Math.random() * 500;
+        let y = Math.random() * 500;
         return {
           type:'text',
-          x:Math.random() * 500,
-          y: Math.random() * 500,
+          x,
+          y,
           style:{
             text: data[params.dataIndex].name,
             fontSize:data[params.dataIndex].value,

@@ -64,15 +64,14 @@ export const useMainStore = defineStore('main', () => {
     }]
   },{
     name:'复合图表',
-    path:'/complex',
     children:[{
       name:'时间轴',
       path:'/timeline'
     },{
-      name:'elecDashboard',
+      name:'电商面板',
       path:'/elecDashboard'
     },{
-      name:'carsSale',
+      name:'车辆销售',
       path:'/carsSale'
     }]
   }]);
