@@ -5,65 +5,65 @@ const routes = [{
   redirect: '/line'
 }, {
   path: '/line',
-  component: () => import('@/components/basic/Line.vue')
+  component: () => import('@/views/basic/Line.vue')
 }, {
   path: '/bar',
-  component: () => import('@/components/basic/Bar.vue')
+  component: () => import('@/views/basic/Bar.vue')
 }, {
   path:'/pie',
-  component:() => import('@/components/basic/Pie.vue')
+  component:() => import('@/views/basic/Pie.vue')
 },{
   path:'/scatter',
-  component:() => import('@/components/basic/Scatter.vue')
+  component:() => import('@/views/basic/Scatter.vue')
 },{
   path:'/buble',
-  component:() => import('@/components/basic/Buble.vue')
+  component:() => import('@/views/basic/Buble.vue')
 },{
   path:'/radar',
-  component:() => import('@/components/basic/Radar.vue')
+  component:() => import('@/views/basic/Radar.vue')
 },{
   path:'/funnel',
-  component:() => import('@/components/basic/Funnel.vue')
+  component:() => import('@/views/basic/Funnel.vue')
 },{
   path:'/gauge',
-  component:() => import('@/components/basic/Gauge.vue')
+  component:() => import('@/views/basic/Gauge.vue')
 },{
   path:'/boxplot',
-  component:() => import('@/components/basic/Boxplot.vue')
+  component:() => import('@/views/basic/Boxplot.vue')
 },{
   path:'/heatmap',
-  component:() => import('@/components/basic/Heatmap.vue')
+  component:() => import('@/views/basic/Heatmap.vue')
 },{
   path:'/sunburst',
-  component:() => import('@/components/basic/Sunburst.vue')
+  component:() => import('@/views/basic/Sunburst.vue')
 },{
   path:'/sankey',
-  component:() => import('@/components/basic/Sankey.vue')
+  component:() => import('@/views/basic/Sankey.vue')
 },{
   path:'/wordcloud',
-  component:() => import('@/components/basic/Wordcloud.vue')
+  component:() => import('@/views/basic/Wordcloud.vue')
 },{
   path:'/tree',
-  component:() => import('@/components/basic/Tree.vue')
+  component:() => import('@/views/basic/Tree.vue')
 },{
   path:'/treemap',
-  component:() => import('@/components/basic/Treemap.vue')
+  component:() => import('@/views/basic/Treemap.vue')
 },{
   path:'/graph',
-  component:() => import('@/components/basic/Graph.vue')
+  component:() => import('@/views/basic/Graph.vue')
 },{
   path:'/calendar',
-  component:() => import('@/components/basic/Calendar.vue')
+  component:() => import('@/views/basic/Calendar.vue')
 },{
   path:'/map',
-  component:() => import('@/components/basic/Map.vue')
+  component:() => import('@/views/basic/Map.vue')
 },{
   path:'/geo',
-  component:() => import('@/components/basic/Geo.vue')
+  component:() => import('@/views/basic/Geo.vue')
 },
 {
   path:'/timeline',
-  component:() => import('@/components/complex/Timeline.vue')
+  component:() => import('@/views/complex/Timeline.vue')
 },{
   path:'/elecDashboard',
   component:() => import('@/views/ElecSale.vue')

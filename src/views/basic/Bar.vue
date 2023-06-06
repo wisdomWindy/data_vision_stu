@@ -24,7 +24,7 @@ onMounted(() => {
     },
     legend: {
       data: ['温度'],
-      left: 'right'
+      left: '60%'
     },
     tooltip: {
       trigger: 'axis',
