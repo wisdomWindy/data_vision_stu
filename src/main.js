@@ -11,8 +11,4 @@ import './assets/style/common.css'
 
 const app = createApp(App)
 
-app.use(createPinia())
-app.use(router)
-app.use(ElementPlus)
-
-app.mount('#app')
+app.use(createPinia()).use(router).use(ElementPlus).mount('#app')
