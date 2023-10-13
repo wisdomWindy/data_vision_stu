@@ -3,9 +3,9 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/node:18.8.1
+      - image: cimg/node:18.18.1
     # branches:
-    #   only: "master"
+    #   only: "main"
     steps:
       - add_ssh_keys:
           fingerprints:
