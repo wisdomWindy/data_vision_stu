@@ -3,13 +3,13 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circle/node:10
+      - image: circle/node:18
     branches:
       only: "master"
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "3a:af:54:9d:57:e4:22:f2:4f:7b:f0:5f:c6:e4:c5:67"
+            - "72:a2:03:55:34:a2:af:48:15:af:f6:ba:ba:81:d2:68"
       - checkout
       - restore_cache:
           keys:
