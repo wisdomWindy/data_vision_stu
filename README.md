@@ -1,4 +1,5 @@
 # data_vision
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/wisdomWindy/data_vision_stu/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/wisdomWindy/data_vision_stu/tree/main)
 
 这个项目名为data_vision，中文叫做数据可视化。这个项目主要用于学习使用echarts制作各种图表。
 
