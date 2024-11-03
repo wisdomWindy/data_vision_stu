@@ -3,8 +3,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, createApp } from 'vue'
-import { echarts, useEchartsInstance } from '@/utils/useEchartsInstance'
+import useEcharts from '../../hooks/useEcharts';
 function createData() {
   let data = [];
   for (let i = 0; i < 7; i++) {
@@ -26,9 +25,8 @@ function createData() {
 }
 const rankData = createData();
  
-let timeline = ref(null);
-onMounted(() => {
-  let echartsInstance = useEchartsInstance(timeline.value);
+let {container:timeline} = useEcharts(createOption());
+function createOption(){
   const option = {
     baseOption:{
       animationDurationUpdate:1000 * 1.5,
@@ -100,9 +98,8 @@ onMounted(() => {
       }]
     });
   }
-  console.log(option.options);
-  echartsInstance.setOption(option);
-});
+  return option
+}
 </script>
 
 <style scoped>

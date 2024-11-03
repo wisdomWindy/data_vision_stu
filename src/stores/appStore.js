@@ -1,7 +1,8 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
-
+import useLineStore from './lineStore';
 export const useMainStore = defineStore('main', () => {
+  const lineStore = useLineStore()
   let menuList = ref([{
     name:'基础图表',
     children:[{
@@ -75,5 +76,5 @@ export const useMainStore = defineStore('main', () => {
       path:'/carsSale'
     }]
   }]);
-  return { menuList }
+  return { menuList,lineStore }
 })

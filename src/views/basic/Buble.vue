@@ -3,13 +3,9 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import { echarts, useEchartsInstance } from '@/utils/useEchartsInstance';
+import useEcharts from '../../hooks/useEcharts';
 
-const buble = ref(null);
-onMounted(() => {
-  const echartsInstance = useEchartsInstance(buble.value);
-  const option = {
+const {container:buble} = useEcharts({
     xAxis: {},
     yAxis: {},
     legend: {
@@ -30,9 +26,8 @@ onMounted(() => {
         return data[2];
       }
     }]
-  };
-  echartsInstance.setOption(option);
-});
+  });
+
 </script>
 
 <style scoped>

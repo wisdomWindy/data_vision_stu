@@ -5,10 +5,10 @@ const routes = [{
   redirect: '/line'
 }, {
   path: '/line',
-  component: () => import('@/views/basic/Line.vue')
+  component: () => import('@/views/basic/line/Line.vue')
 }, {
   path: '/bar',
-  component: () => import('@/views/basic/Bar.vue')
+  component: () => import('@/views/basic/bar/Bar.vue')
 }, {
   path:'/pie',
   component:() => import('@/views/basic/Pie.vue')
@@ -66,10 +66,10 @@ const routes = [{
   component:() => import('@/views/complex/Timeline.vue')
 },{
   path:'/elecDashboard',
-  component:() => import('@/views/ElecSale.vue')
+  component:() => import('@/views/complex/ElecSale.vue')
 },{
   path:'/carsSale',
-  component:() => import('@/views/CarsSale.vue')
+  component:() => import('@/views/complex/CarsSale.vue')
 }];
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

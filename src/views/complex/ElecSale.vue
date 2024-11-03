@@ -3,13 +3,9 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import { echarts, useEchartsInstance } from '@/utils/useEchartsInstance';
+import useEcharts from '../../hooks/useEcharts';
 
-const elecsale = ref(null);
-onMounted(() => {
-  const echartsInstance = useEchartsInstance(elecsale.value);
-  const option = {
+const {container:elecsale} = useEcharts({
     title: [{
       text: '今日订单总销量',
       x: 'center',
@@ -163,9 +159,7 @@ onMounted(() => {
       data: [456, 234, 768, 346, 325, 768, 231, 908],
       smooth: true
     }]
-  }
-  echartsInstance.setOption(option);
-});
+  });
 </script>
 
 <style scoped>

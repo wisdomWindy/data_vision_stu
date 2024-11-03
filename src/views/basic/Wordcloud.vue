@@ -3,28 +3,8 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import { echarts, useEchartsInstance } from '@/utils/useEchartsInstance';
-const wordcloud = ref(null);
-const data = [{
-  name: 'hellp',
-  value: 10
-}, {
-    name: '没有',
-    value: 20
-  }, {
-    name: '不错',
-    value: 16
-  }, {
-    name: '还行',
-    value: 30
-  }, {
-    name: '屏幕',
-    value: 40
-  }];
-onMounted(() => {
-  const echartsInstance = useEchartsInstance(wordcloud.value);
-  const option = {
+import useEcharts from '../../hooks/useEcharts';
+const {container:wordcloud} = useEcharts({
     xAxis:{
       show:false
     },
@@ -47,11 +27,28 @@ onMounted(() => {
           }
         }
       },
-      data: data
+      data: createData()
     }]
-  };
-  echartsInstance.setOption(option);
-})
+  });
+  function createData(){
+    return  [{
+  name: 'hellp',
+  value: 10
+}, {
+    name: '没有',
+    value: 20
+  }, {
+    name: '不错',
+    value: 16
+  }, {
+    name: '还行',
+    value: 30
+  }, {
+    name: '屏幕',
+    value: 40
+  }];
+  }
+
 </script>
 
 <style scoped>

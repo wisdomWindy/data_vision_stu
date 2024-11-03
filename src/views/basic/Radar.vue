@@ -3,13 +3,9 @@
 </template>
 
 <script setup>
-import {ref,onMounted} from 'vue'
-import {echarts, useEchartsInstance} from '@/utils/useEchartsInstance';
+import useEcharts from '../../hooks/useEcharts';
 
-const radar = ref(null);
-onMounted(() => {
-  const echartsInstance = useEchartsInstance(radar.value);
-  const option = {
+const {container:radar} = useEcharts({
     legend:{
       data:['员工1', '员工2']
     },
@@ -41,9 +37,7 @@ onMounted(() => {
         value: [100, 150, 330, 840, 240]
       }]
     }]
-  };
-  echartsInstance.setOption(option);
-})
+  });
 </script>
 
 <style scoped>

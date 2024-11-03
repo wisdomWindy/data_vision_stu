@@ -3,13 +3,11 @@
 </template> 
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import { echarts, useEchartsInstance } from '@/utils/useEchartsInstance';
+import useEcharts from '../../hooks/useEcharts';
 
-const boxplot = ref(null);
-onMounted(() => {
-  const echartsInstance = useEchartsInstance(boxplot.value);
-  const option = {
+const {
+  container:boxplot
+} = useEcharts({
     tooltip:{},
     xAxis: {
       type: 'category',
@@ -25,9 +23,8 @@ onMounted(() => {
       type: 'boxplot',
       data: [[100, 209, 120, 230, 340, 240], [100, 209, 120, 230, 340, 240]]
     }]
-  };
-  echartsInstance.setOption(option);
-})
+  });
+
 </script>
 
 <style scoped>

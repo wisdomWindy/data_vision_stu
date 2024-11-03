@@ -1,5 +1,5 @@
 <script setup>
-import {useMainStore} from '@/stores/counter.js'
+import {useMainStore} from '@/stores/appStore.js'
 const mainStore = useMainStore();
 const menuList = mainStore.menuList;
 </script>

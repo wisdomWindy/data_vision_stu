@@ -3,13 +3,9 @@
 </template>
 
 <script setup>
-import { echarts, useEchartsInstance } from '@/utils/useEchartsInstance'
-import { onMounted, ref } from 'vue';
+import useEcharts from '../../hooks/useEcharts';
 
-let pie = ref(null);
-onMounted(() => {
-  let echartsInstance = useEchartsInstance(pie.value);
-  let option = {
+let {container:pie} = useEcharts({
     tooltip: {
     },
     legend: {
@@ -32,9 +28,7 @@ onMounted(() => {
         value: 130
       }]
     }]
-  };
-  echartsInstance.setOption(option);
-});
+  });
 </script>
 
 <style scoped>

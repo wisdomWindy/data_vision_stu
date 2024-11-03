@@ -3,9 +3,19 @@
 </template>
 
 <script setup>
-import {ref, onMounted} from 'vue';
-import {echarts, useEchartsInstance} from '@/utils/useEchartsInstance';
-const sunburst = ref(null);
+import useEcharts from '../../hooks/useEcharts';
+const {container:sunburst} = useEcharts({
+    tooltip:{},
+    series:[{
+      type:"sunburst",
+      data:createData(),
+      radius:[0, '90%'],
+      label:{
+        showL:true,
+        rotate:'radial'
+      }
+    }]
+  });
 function createData(){
   let data = [];
   for(let i = 0; i < 3; i++){
@@ -21,25 +31,8 @@ function createData(){
       });
     }
   }
-  console.log(data)
   return data;
 }
-onMounted(() => {
-  const echartsInstance = useEchartsInstance(sunburst.value);
-  const option = {
-    tooltip:{},
-    series:[{
-      type:"sunburst",
-      data:createData(),
-      radius:[0, '90%'],
-      label:{
-        showL:true,
-        rotate:'radial'
-      }
-    }]
-  };
-  echartsInstance.setOption(option);
-});
 </script>
 
 <style scoped>

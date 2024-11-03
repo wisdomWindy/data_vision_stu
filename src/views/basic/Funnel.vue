@@ -3,12 +3,8 @@
 </template>
 
 <script setup>
-import {ref, onMounted} from 'vue';
-import {echarts, useEchartsInstance} from '@/utils/useEchartsInstance';
-const funnel = ref(null);
-onMounted(() => {
-  const echartsInstance = useEchartsInstance(funnel.value);
-  const option = {
+import useEcharts from '../../hooks/useEcharts';
+const {container:funnel} = useEcharts({
     legend:{
       data:['登录', '注册']
     },
@@ -27,9 +23,7 @@ onMounted(() => {
           value: 50
         }]
     }]
-  };
-  echartsInstance.setOption(option);
-})
+  });
 </script>
 
 <style scoped>

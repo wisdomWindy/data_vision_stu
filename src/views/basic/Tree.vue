@@ -3,12 +3,8 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import { echarts, useEchartsInstance } from '@/utils/useEchartsInstance';
-const tree = ref(null);
-onMounted(() => {
-  const echartsInstance = useEchartsInstance(tree.value);
-  const option = {
+import useEcharts from '../../hooks/useEcharts';
+const {container:tree} = useEcharts({
     tooltip:{},
     legend: {
       data: [{
@@ -30,9 +26,7 @@ onMounted(() => {
         }]
       }]
     }]
-  };
-  echartsInstance.setOption(option);
-});
+  });
 </script>
 
 <style scoped>

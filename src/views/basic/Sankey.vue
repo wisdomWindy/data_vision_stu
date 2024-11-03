@@ -3,12 +3,8 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { echarts, useEchartsInstance } from '@/utils/useEchartsInstance';
-const sankey = ref(null);
-onMounted(() => {
-  const echartsInstance = useEchartsInstance(sankey.value);
-  const option = {
+import useEcharts from '../../hooks/useEcharts';
+const {container:sankey} = useEcharts({
     tooltip:{},
     series: [{
       type: 'sankey',
@@ -34,9 +30,7 @@ onMounted(() => {
         show:true
       }
     }]
-  };
-  echartsInstance.setOption(option);
-});
+  });
 </script>
 
 <style scoped>

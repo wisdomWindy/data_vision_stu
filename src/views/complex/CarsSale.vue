@@ -3,13 +3,9 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import { echarts, useEchartsInstance } from '@/utils/useEchartsInstance';
+import useEcharts from '../../hooks/useEcharts';
 
-const carSale = ref(null);
-onMounted(() => {
-  const echartsInstance = useEchartsInstance(carSale.value);
-  const option = {
+const {container:carSale} = useEcharts({
     title: [{
       text: '车辆总数（辆）',
       x: '7%',
@@ -183,9 +179,7 @@ onMounted(() => {
         data:[129,430,238,549,123,543,238],
         smooth:true
       }]
-  }
-  echartsInstance.setOption(option);
-});
+  });
 </script>
 
 <style scoped>

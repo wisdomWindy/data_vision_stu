@@ -5,15 +5,14 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { echarts, useEchartsInstance } from '@/utils/useEchartsInstance';
+import useEcharts from '../../hooks/useEcharts';
 
-const container = ref(null);
-onMounted(() => {
-  const echartsInstance = useEchartsInstance(container.value);
-  const option = {
+const {container} = useEcharts({
     legend: {
       data: ['A产品', 'B产品']
+    },
+    tooltip:{
+      trigger:'item'
     },
     xAxis: {},
     yAxis: {},
@@ -26,9 +25,7 @@ onMounted(() => {
       name: 'B产品',
       data: [[20, 30], [23, 26]]
     }]
-  };
-  echartsInstance.setOption(option);
-});
+  });
 </script>
 
 <style scoped>

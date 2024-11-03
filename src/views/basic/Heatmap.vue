@@ -3,9 +3,29 @@
 </template>
 
 <script setup>
-import {ref, onMounted, createApp} from 'vue';
-import {echarts, useEchartsInstance} from '@/utils/useEchartsInstance';
-const heatmap = ref(null);
+import useEcharts from '../../hooks/useEcharts';
+const {container:heatmap} = useEcharts({
+    xAxis:{
+      type:'category',
+      data:createXAxis()
+    },
+    yAxis:{
+      type:'category',
+      data:createyAxis()
+    },
+    visualMap:{
+      min:0,
+      max:100,
+      orient:'horizontal'
+    },
+    series:[{
+      type:'heatmap',
+      data:createData(),
+      label:{
+        show:true
+      }
+    }]
+  });
 function createyAxis() {
   let yAxis = [];
   for (let i = 0; i < 7; i++) {
@@ -30,33 +50,6 @@ function createData() {
   return data;
 }
 
-onMounted(() => {
-  const echartsInstance = useEchartsInstance(heatmap.value);
-  const option = {
-    xAxis:{
-      type:'category',
-      data:createXAxis()
-    },
-    yAxis:{
-      type:'category',
-      data:createyAxis()
-    },
-    visualMap:{
-      min:0,
-      max:100,
-      orient:'horizontal'
-    },
-    series:[{
-      type:'heatmap',
-      data:createData(),
-      label:{
-        show:true
-      }
-    }]
-  };
-
-  echartsInstance.setOption(option);
-});
 </script>
 
 <style scoped>

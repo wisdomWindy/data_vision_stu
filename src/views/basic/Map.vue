@@ -4,8 +4,7 @@
 
 <script setup>
 import chinaMap from '../../assets/map/china.json';
-import { ref, onMounted } from 'vue';
-import { echarts, useEchartsInstance } from '@/utils/useEchartsInstance';
+import useEcharts,{echarts} from '../../hooks/useEcharts';
 function createData(){
   return chinaMap.features.map(item => {
     return {
@@ -14,11 +13,8 @@ function createData(){
     }
   });
 }
-const map = ref(null);
-onMounted(() => {
-  echarts.registerMap('china', chinaMap);
-  const echartsInstance = useEchartsInstance(map.value);
-  const option = {
+ echarts.registerMap('china', chinaMap);
+const {container:map} = useEcharts({
     visualMap:{
       type:'piecewise',
       pieces:[{
@@ -42,9 +38,7 @@ onMounted(() => {
       name:'shortName',
       data:createData()
     }]
-  };
-  echartsInstance.setOption(option);
-});
+  });
 </script>
 
 <style scoped>

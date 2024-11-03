@@ -3,12 +3,8 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import { echarts, useEchartsInstance } from '@/utils/useEchartsInstance';
-const graph = ref(null);
-onMounted(() => {
-  const echartsInstance = useEchartsInstance(graph.value);
-  const option = {
+import useEcharts from '../../hooks/useEcharts';
+const {container:graph} = useEcharts({
     tooltip: {},
     label:{
       show:true
@@ -45,9 +41,7 @@ onMounted(() => {
         curveness: 0
       }
     }]
-  };
-  echartsInstance.setOption(option);
-});
+  });
 </script>
 
 <style scoped>
