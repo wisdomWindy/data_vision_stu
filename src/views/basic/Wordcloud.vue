@@ -4,6 +4,7 @@
 
 <script setup>
 import useEcharts from '../../hooks/useEcharts';
+const data = createData();
 const {container:wordcloud} = useEcharts({
     xAxis:{
       show:false
@@ -27,7 +28,7 @@ const {container:wordcloud} = useEcharts({
           }
         }
       },
-      data: createData()
+      data
     }]
   });
   function createData(){

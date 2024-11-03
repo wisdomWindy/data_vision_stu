@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import useEcharts from '../../hooks/useEcharts';
+import useEcharts,{echarts} from '../../hooks/useEcharts';
 
 const {container:calendar} = useEcharts({
     tooltip: {},
